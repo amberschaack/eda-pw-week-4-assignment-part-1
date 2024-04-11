@@ -133,6 +133,26 @@ console.log(allPositive(numbersArray));
 // 11. Pick a problem from Edabit(https://edabit.com/) or
 //     CodeWars(https://www.codewars.com/). Then describe it
 //     here in a comment, write the function, and test it!
+/*
+The task was to create a function that returned the amount of 'true' occurances in an array.
+In order to keep track of the occurances, I declared a variable called 'count' and added to that count whenever the current index was equal to true.
+I initiated the count to be 0 so that if an empty array is passed, then 0 will still be returned.
+Finally, I returned the count so when I console log my function it will return a number.
+*/
+function countTrue(array) {
+  let count = 0;
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] === true) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log('in countTrue function:');
+let trueArray = [true, false, true, true, false];
+console.log(countTrue(trueArray));
+let emptyArray1 = [];
+console.log(countTrue(emptyArray1));
 
 // DO NOT MODIFY
 // Used for automated testing
